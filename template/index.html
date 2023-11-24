@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Prediction Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <body>
+        <h1>Health Prediction Form</h1>
+        <form action="/predict" method="post">
+            <label for="BMI">BMI:</label>
+            <select name="BMI" id="BMI">
+                <option value="0">Healthy Weight</option>
+                <option value="1">Obesity</option>
+                <option value="2">Overweight</option>
+                <option value="3">Underweight</option>
+            </select><br>
+    
+            <label for="Smoking">Smoking:</label>
+            <select name="Smoking" id="Smoking">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select><br>
+    
+            <label for="AlcoholDrinking">Alcohol Drinking:</label>
+            <select name="AlcoholDrinking" id="AlcoholDrinking">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select><br>
+    
+            <label for="Stroke">Stroke:</label>
+            <select name="Stroke" id="Stroke">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select><br>
+    
+            <label for="PhysicalHealth">Physical Health:</label>
+            <input type="range" name="PhysicalHealth" id="PhysicalHealth" min="1" max="30"><br>
+    
+            <label for="MentalHealth">Mental Health:</label>
+            <input type="range" name="MentalHealth" id="MentalHealth" min="1" max="30"><br>
+    
+            <label for="DiffWalking">Difficulty Walking:</label>
+            <select name="DiffWalking" id="DiffWalking">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select><br>
+    
+            <label for="Sex">Sex:</label>
+            <select name="Sex" id="Sex">
+                <option value="0">Female</option>
+                <option value="1">Male</option>
+            </select><br>
+    
+            <label for="AgeCategory">Age Category:</label>
+            <select name="AgeCategory" id="AgeCategory">
+                <option value="0">18-24</option>
+                <option value="1">25-29</option>
+                <option value="2">30-34</option>
+                <option value="3">35-39</option>
+                <option value="4">40-44</option>
+                <option value="5">45-49</option>
+                <option value="6">50-54</option>
+                <option value="7">55-59</option>
+                <option value="8">60-64</option>
+                <option value="9">65-69</option>
+                <option value="10">70-74</option>
+                <option value="11">75-79</option>
+            </select><br>
+    
+            <label for="Race">Race:</label>
+            <select name="Race" id="Race">
+                <option value="0">Asian</option>
+                <option value="1">Hispanic</option>
+                <option value="2">Black</option>
+                <option value="3">Other</option>
+                <option value="4">White</option>
+                <option value="5">American Indian/Alaskan Native</option>
+            </select><br>
+    
+            <label for="Diabetic">Diabetic:</label>
+            <select name="Diabetic" id="Diabetic">
+                <option value="0">No</option>
+                <option value="2">No, borderline diabetes</option>
+                <option value="1">Yes</option>
+                <option value="3">Yes (during pregnancy)</option>
+            </select><br>
+
+            <label for="PhysicalActivity">Physical Activity:</label>
+            <select name="PhysicalActivity" id="DiffWalking">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select><br>
+
+            <label for="GenHealth">General Health:</label>
+            <select name="GenHealth" id="GenHealth">
+                <option value="0">Excellent</option>
+                <option value="1">Fair</option>
+                <option value="2">Good</option>
+                <option value="3">Poor</option>
+                <option value="4">Very good</option>
+            </select><br>
+            
+    
+            <label for="SleepTime">Sleep Time:</label>
+            <input type="range" name="SleepTime" id="SleepTime" min="1" max="15"><br>
+    
+            <!-- Asthma Dropdown -->
+            <label for="Asthma">Asthma:</label>
+            <select name="Asthma" id="Asthma">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select><br>
+    
+            <!-- Kidney Disease Dropdown -->
+            <label for="KidneyDisease">Kidney Disease:</label>
+            <select name="KidneyDisease" id="KidneyDisease">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select><br>
+    
+            <!-- Skin Cancer Dropdown -->
+            <label for="SkinCancer">Skin Cancer:</label>
+            <select name="SkinCancer" id="SkinCancer">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select><br>
+
+            <input type="submit" value="Predict">
+
+        </form>
+    </body>
+</html>
